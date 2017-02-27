@@ -17,5 +17,17 @@ public class PrimeNumberTest {
         Assert.assertEquals(2,PrimeNumber.findPrime(1));
 
     }
+    public static String getYesOrNo(Scanner sc, String prompt) {
+        System.out.println("Would you like to pick another number yes or no?");
+
+        String s = sc.next();// read user entry
+
+        while (!(s.equalsIgnoreCase("yes") || s.equalsIgnoreCase("no"))) {
+            System.out.println("Error! Invalid entry, please type yes or no ");
+            s = sc.next();
+            sc.nextLine();
+
+        }
+        return s;
 
 }
